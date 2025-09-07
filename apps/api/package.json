@@ -1,0 +1,19 @@
+{
+  "name": "@lyricgenius/api",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "build": "tsc -b",
+    "deploy": "wrangler deploy",
+    "lint": "eslint . --ext ts --max-warnings 0",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "hono": "^4.5.9"
+  },
+  "devDependencies": {
+    "wrangler": "^3.69.0"
+  }
+}

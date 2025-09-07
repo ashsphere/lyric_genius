@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* レイヤーカスタマイズ例 */
+:root {
+  --color-brand: #7c3aed;
+}
+
+body { @apply bg-white text-gray-900; }
