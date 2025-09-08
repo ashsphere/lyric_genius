@@ -2,7 +2,7 @@
   "name": "lyricgenius",
   "private": true,
   "version": "0.0.0",
-  "packageManager": "pnpm@9.6.0",
+  "packageManager": "npm@10.8.1",
   "engines": {
     "node": ">=20.14.0"
   },
@@ -11,10 +11,13 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "pnpm --filter @lyricgenius/frontend dev",
-    "build": "pnpm -r build",
-    "typecheck": "pnpm -r typecheck",
-    "lint": "pnpm -r lint",
+    "dev": "npm run dev -w @lyricgenius/frontend",
+    "dev:fe": "npm run dev -w @lyricgenius/frontend",
+    "dev:api": "npm run dev -w @lyricgenius/api",
+    "dev:all": "node scripts/dev-all.js",
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
     "format": "prettier -w .",
     "prepare": "husky"
   },

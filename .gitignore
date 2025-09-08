@@ -5,6 +5,8 @@ dist/
 .env
 .env.*
 .wrangler/
+# Miniflare (old wrangler) state dir
+.mf/
 
 # Logs
 npm-debug.log*
@@ -22,3 +24,7 @@ coverage/
 
 plan/
 .specstory/
+
+# Wrangler local dev vars (any package)
+**/.dev.vars
+**/.dev.vars.*

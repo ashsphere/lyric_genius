@@ -17,20 +17,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: '.nodenv'
-          cache: 'pnpm'
-
-      - name: Enable Corepack
-        run: corepack enable
+          cache: 'npm'
 
       - name: Install deps
-        run: pnpm install --frozen-lockfile=false
+        run: npm ci || npm install
 
       - name: Lint
-        run: pnpm lint
+        run: npm run lint --workspaces --if-present
 
       - name: Typecheck
-        run: pnpm typecheck
+        run: npm run typecheck --workspaces --if-present
 
       - name: Build
-        run: pnpm build
-
+        run: npm run build --workspaces --if-present

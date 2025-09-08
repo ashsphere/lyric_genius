@@ -8,7 +8,9 @@ export interface Persona {
 export interface EmotionParams {
   bright: number; // 明るい (0-100)
   sad: number; // 切ない (0-100)
+  sadness: number; // 悲しさ (0-100)
   dark: number; // ダーク (0-100)
+  despair: number; // 絶望的 (0-100)
   hope: number; // 希望 (0-100)
   nostalgic: number; // ノスタルジック (0-100)
   grand: number; // 壮大 (0-100)
@@ -33,3 +35,9 @@ export interface Rule {
   updated_at: string;
 }
 
+export interface PersonaTemplate {
+  name: string;
+  prompt: string;
+  description: string;
+  category: string;
+}
